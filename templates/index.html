@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression Example</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Linear Regression Web</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </div>
+        <hr class="divider">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div id="app" class="container">
+            <div class="input-section">
+                <h3>Linear Regression Prediction</h3>
+                <form action="/predict" method="POST">
+                    <button type="submit" class="btn">Generate Plot</button>
+                </form>
+            </div>
+            <div class="output-section box">
+                <h3>Prediction Plot</h3>
+                {% if plot_url %}
+                    <img src="{{ url_for('static', filename=plot_url) }}" alt="Linear Regression Plot" style="max-width: 100%; max-height: 300px; margin-top: 10px;">
+                {% else %}
+                    <p>No plot generated yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr class="divider">
+        <p>&copy; 2025 Linear Regression Classifier. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
