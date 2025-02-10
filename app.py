@@ -1,6 +1,6 @@
 import streamlit as st
 import matplotlib
-matplotlib.use('Agg')  # Use non-GUI Agg backend
+# matplotlib.use('Agg')  # Use non-GUI Agg backend
 import matplotlib.pyplot as plt
 import numpy as np
 import os
