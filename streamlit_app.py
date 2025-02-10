@@ -64,7 +64,7 @@ def main():
     if st.button("Generate Plot"):
         try:
             plot_path = generate_plot()
-            st.image(plot_path, caption="Linear Regression Plot", use_column_width=True)
+            st.image(plot_path, caption="Linear Regression Plot", use_container_width=True)
         except Exception as e:
             st.error(f"An error occurred: {e}")
     
